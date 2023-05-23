@@ -21,6 +21,17 @@ int	ft_types(va_list arg, const char type)
 		lenght += ft_putchar(va_arg(arg, int));
 	else if (type == 's')
 		lenght += ft_putstr(va_arg(arg, char *));
+	else if (type == 'p')
+		lenght += ft_putptr(va_arg(arg, unsigned long));
+	else if (type == 'd' || type == 'i')
+		lenght += ft_putnbr(va_arg(arg, int));
+	else if (type == 'u')
+		lenght += ft_putunsigned(va_arg(arg, unsigned int));
+	else if (type == 'x')
+		lenght += ft_puthexa(va_arg(arg, unsigned int), "0123456789abcdef");
+	else if (type == 'X')
+		lenght += ft_puthexa(va_arg(arg, unsigned int), "0123456789ABCDEF");
+	return (lenght);
 }
 
 int	ft_printf(const char *, ...)

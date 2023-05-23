@@ -21,6 +21,9 @@
 int	ft_putchar(char c);
 int	ft_putstr(char *s);
 int	ft_putnbr(int nbr);
+int	ft_puthexa();
+int	ft_putptr();
+int	ft_putunsigned();
 
 /* Principal functions */
 int	ft_types(va_list arg, const char type);
