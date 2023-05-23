@@ -35,18 +35,18 @@ int	ft_putstr(char *s)
 
 int	ft_putnbr(int nbr)
 {
-	int	index;
+	int	i;
 
-	index = 0;
+	i = 0;
 	if (nbr == -2147483648)
 		return (ft_putstr("-2147483648"));
 	if (nbr < 0)
 	{
-		index += ft_putchar('-');
+		i += ft_putchar('-');
 		nbr *= -1;
 	}
 	if (nbr > 9)
-		index += ft_putnbr(nbr / 10);
-	index += ft_putchar(nbr % 10 + '0');
-	return (index);
+		i += ft_putnbr(nbr / 10);
+	i += ft_putchar(nbr % 10 + '0');
+	return (i);
 }
