@@ -16,14 +16,15 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <stdarg.h>
 
 /* Utils functions */
 int	ft_putchar(char c);
 int	ft_putstr(char *s);
 int	ft_putnbr(int nbr);
-int	ft_puthexa();
-int	ft_putptr();
-int	ft_putunsigned();
+int	ft_puthexa(unsigned long nbr, char *hexa);
+int	ft_putptr(unsigned long nbr, char *ptr);
+int	ft_putunsigned(unsigned int nbr);
 
 /* Principal functions */
 int	ft_types(va_list arg, const char type);
